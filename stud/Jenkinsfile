@@ -1,0 +1,11 @@
+pipeline{
+	agent any{
+		stages{
+			stage('Compile Stage'){
+				withMaven(maven:'maven3.6.3'){
+					mvn 'clean compile'
+				}
+			}
+		}
+	}
+}
